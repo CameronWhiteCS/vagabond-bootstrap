@@ -1,39 +1,40 @@
-@use "sass:map";
-
 @import "../functions";
 @import "../variables";
 @import "../mixins";
 @import "../utilities";
 
-$xs: map.get($grid-breakpoints, "xs");
-$sm: map.get($grid-breakpoints, "sm");
-$md: map.get($grid-breakpoints, "md");
-$lg: map.get($grid-breakpoints, "lg");
-$xl: map.get($grid-breakpoints, "xl");
-$xxl: map.get($grid-breakpoints, "xxl");
+@import "./variables";
 
 div.vagabond-navbar {
     display: flex;
     order: 1;
     color: darkgray;
-    background-color: black;
-    height: 64px;
+    background-color: $dark;
+    height: 70px;
     flex-wrap: wrap;
-
+    align-content: center;
+    justify-content: space-between;
+    line-height: normal;
+    padding: 10px;
     a {
-        flex: 1;
-        margin: 10px;
-        padding: 10px;
-        max-width: 24px;
-        color: currentColor;
-        transition: ease-in-out 250ms;
-        transition-property: color;
-        border: none;
-        text-align: center;
+        color: white;
     }
-    a:hover {
-        color: red;
+
+    #vagabondTitle {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: white;
     }
+
+    .logoAndTitle {
+        display: flex;
+    }
+
+    svg.icon {
+        margin-left: 25px;
+    }
+
 }
 
 #container-root {
@@ -57,7 +58,7 @@ div.vagabond-navbar {
     padding: 10px;
 }
 
-@media only screen and (min-width: $xs) and (max-width: $lg - 1) {
+@media only screen and (min-width: $xs) and (max-width: $md - 1) {
     #root {
         display: block;
     }
@@ -77,12 +78,28 @@ div.vagabond-navbar {
 
     div.vagabond-navbar {
         position: fixed;
-        align-content: space-between;
         bottom: 0;
         width: 100%;
-        a {
-            max-width: none;
-            width: 24px;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        line-height: normal;
+        
+        .logoAndTitle {
+            display: none;
         }
+
+        .icon-bar-horizontal {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        svg.icon {
+            margin: 0;
+        }
+
     }
 }
+
+
+

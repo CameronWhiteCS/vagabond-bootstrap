@@ -1,37 +1,67 @@
-@use "sass:map";
-
 @import "../functions";
 @import "../variables";
 @import "../mixins";
 @import "../utilities";
+
+@import "./variables";
+
 @import "./macro-layout";
 @import "./compose-note";
-
-$xs: map.get($grid-breakpoints, "xs");
-$sm: map.get($grid-breakpoints, "sm");
-$md: map.get($grid-breakpoints, "md");
-$lg: map.get($grid-breakpoints, "lg");
-$xl: map.get($grid-breakpoints, "xl");
-$xxl: map.get($grid-breakpoints, "xxl");
+@import "./note";
 
 $bg-dark: black;
 
-textarea.vagabond {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    resize: none;
-    overflow: hidden;
-    border: none;
-    outline: none;
+#root {
+  font-family: "Kumbh Sans", sans-serif;
 }
 
+.icon-bar-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: $gray-600;
+}
 
+.icon-bar-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  color: $gray-600;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  transition-property: color;
+  transition: all 250ms ease-in-out;
+}
+
+.icon:hover {
+  color: $primary;
+  transform: scale(1.1);
+}
+
+textarea.vagabond {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.vagabond-tile {
+  border-radius: 15px;
+  border: 1px solid $gray-500;
+  padding: 5px;
+}
 
 p {
   font-size: 14pt;
 }
 
 /*Extra small, small, and medium */
-
