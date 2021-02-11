@@ -1,0 +1,19 @@
+@import "../functions";
+@import "../variables";
+@import "./variables";
+@import "../mixins";
+@import "../utilities";
+
+.note {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto 0px auto;
+    .pfp-container {
+        width: 64px;
+    }
+    .content {
+        margin: 0px 10px 0px 10px;
+        word-wrap: anywhere;
+        width: 100%;
+    }
+}
