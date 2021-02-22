@@ -8,28 +8,77 @@
     display: flex;
     flex-wrap: overflow;
     flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    width: 92%;
+    
     .compose-note {
       display: flex;
       flex: 6;
+      background-color: white;
+      border-style: none;
+      border-width: 0;
+      border-radius: 12px;
+      margin-right: 10px;
 
       .textarea-container {
         margin: 10px;
         flex: 1;
       }
     }
-    .btn {
-      display: block;
-      margin: 5px 10px 5px 10px;
-      height: 100%;
-      flex: 1;
-    }
+
     .buttons {
       flex: 1;
-      flex-direction: column;
       display: flex;
-      margin: 0;
-      padding: 0;
+      flex-direction: column;
+      justify-content: space-between;
+    }  
+
+    .post {
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+      padding-left: 5px;
+      height: 46%;
     }
+
+    .draft {
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: $secondary;
+      padding-left: 5px;
+      align-items: center;
+      height: 46%;
+    }
+
+    .subIconWhite {
+      fill: white;
+      height: 30px;
+      width: 30px;
+      padding-right: 7px;
+    }
+
+
+    .subIconSecondary {
+      fill: $secondary;
+      stroke: white;
+      height: 30px;
+      width: 30px;
+      padding-right: 7px;
+    }
+
+
   }
 
 
@@ -39,17 +88,23 @@
     #compose-note {
       flex-direction: column;
       .buttons {
-        margin: 10px 5px 10px 5px;
+        width: 98%;
+        margin: 10px 0px 10px 0px;
         padding: 0px;
         flex-direction: row;
         align-items: stretch;
+
         .post {
           order: 2;
+          width: 49%;
           margin: 0px 0px 0px 5px;
+          justify-content: center;
         }
         .draft {
           order: 1;
+          width: 49%;
           margin: 0px 5px 0px 0px;
+          justify-content: center;
         }
       }
     }
