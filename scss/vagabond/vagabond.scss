@@ -35,11 +35,10 @@ $bg-dark: black;
   margin: 5px;
   transition-property: color;
   transition: all 250ms ease-in-out;
-}
-
-.icon:hover {
-  color: $primary;
-  transform: scale(1.1);
+  &:hover {
+    color: $primary;
+    transform: scale(1.1);
+  }
 }
 
 textarea.vagabond {
