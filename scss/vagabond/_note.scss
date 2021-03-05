@@ -7,7 +7,14 @@
 .note {
     display: flex;
     flex-direction: row;
-    margin: 10px auto 0px auto;
+    margin: 16px auto 16px auto;
+    border: 0px !important;
+    border-style: none !important;
+    background-color: white;
+    width:92%;
+    font-size: 15px !important;
+    padding: 10px;
+
     .pfp-container {
         width: 64px;
     }

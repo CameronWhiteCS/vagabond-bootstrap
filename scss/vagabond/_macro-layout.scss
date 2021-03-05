@@ -8,17 +8,130 @@ body {
     background-color: $secondary;
 }
 
+/*=-=-=-=-=-=-=-=-=-=-=-=- SHOULD BE NEW SCSS FILE ONLY FOR POPUP-MODAL STUFF, BUT TEMPORARILY HERE*/
+
+.modal-dialog {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    margin:0;
+    min-width: 100% !important;
+    height: 100%;
+    pointer-events: all;            // Makes background not clickable until signup popup is gone
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    pointer-events: auto;
+    background-color: white;
+    background-clip: padding-box;
+    border-style: none;
+    border-radius: 30px;
+    outline: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    .modal-button {
+        margin-top:20px;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: $font-weight-bolder;
+        color:white; 
+    }
+
+    #close {
+        font-weight: $font-weight-bolder;
+        color: $secondary;
+        border-style: none;
+        background-color: white;
+    } 
+    
+    .modal-header {
+
+        .modal-title {
+            font-weight: $font-weight-bolder;
+        }
+
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem 0;
+        width: 80%;
+        font-weight: $font-weight-bolder !important;
+        margin-top: 20px;
+        color: $secondary;
+    }
+
+    .modal-body {
+        width: 80%;
+        padding: 1rem 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    Form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+
+        .form-label {
+            font-weight: $font-weight-bolder;
+            color: $secondary;
+        }
+        
+        .form-group {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .form-control {
+            background-color: $gray-100;
+        }
+
+        .signup-toggler {
+            color: $primary;
+            font-weight: normal;
+            text-decoration: underline;
+            text-decoration-color: $primary;
+
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+
+
 // -=-=-   These two go on _home.scss but compiling the scss with them in _home.scss didn't work so I added them here momentarily
 
 #homeBody {
     background-color: $secondary;
-    height: 100vh;
 }
 
 h1 {
     font-family: 'Kumbh Sans', sans-serif;
-    font-weight: bold;
-    font-size: 40px;
+    font-weight: $font-weight-bolder;
+    font-size: 30px;
     color: white;  
     margin-left: 5%;
     padding-top: 40px;
@@ -35,8 +148,6 @@ div.vagabond-navbar {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
-    line-height: normal;
-    padding: 10px;
    
     a {
         color: white;
@@ -44,7 +155,7 @@ div.vagabond-navbar {
 
     #vagabondTitle {
         font-family: 'Kumbh Sans', sans-serif;
-        font-weight: bold;
+        font-weight: $font-weight-bolder;
         font-size: 30px;
         color: white;
     }
@@ -59,16 +170,20 @@ div.vagabond-navbar {
 }
 
 #container-root {
-    display: flex;  
+    display: flex;
+    height: calc(100vh - 70px);
 }
 
 #sidebar-left, #sidebar-right {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     transition: visibility 1s ease-in-out;
 }
 
 #container-center {
     width: 40%;
+    overflow-y: scroll;
 }
 
 .sidebar-top-bar {
@@ -81,14 +196,10 @@ div.vagabond-navbar {
     border-style: none;
     background: rgba(255, 255, 255,0);    
     font-family: 'Kumbh Sans', sans-serif;
-    font-weight: bold;
+    font-weight: $font-weight-bolder;
     font-size: 30px;
     color: $secondary;
     padding: 10px;
-    /**
-    transition: all 0.3s ease-in-out;
-    property shouldn't be 'all', causes strange visual bug with button
-    **/
 }
 
 #hideButtonLeft {
@@ -119,14 +230,16 @@ div.vagabond-navbar {
 #hideBarRight {
     justify-content: flex-start;
     background: white;
-    margin-top: 0px
+    margin-top: 0px;
 }
 
 .bar {
+    display: flex;
     background-color: white;
     width: 100%;
     height: 100%;
     justify-content: center;
+    
 }
 
 @media only screen and (min-width: $xs) and (max-width: $md - 1) {
