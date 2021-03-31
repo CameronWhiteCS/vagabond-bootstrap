@@ -4,9 +4,163 @@
 @import "../utilities";
 @import "./variables";
 
+a {
+    text-decoration: none !important;
+}
+
 body {
     background-color: $secondary;
 }
+
+.icon-bar-horizontal-searching {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: $gray-600;
+}
+
+.bar-parent-searching {
+    height: 100%;
+    max-width: 35%;
+    width: 35%;
+}
+
+// SEARCH BAR STUFF
+
+.search-bar {
+    display: flex;
+    flex-direction: row; 
+    background-color: white;
+    height: 90%;
+    border-radius: 10px;
+    width: 100%;
+
+    button {
+        height: 80%;
+        margin: auto 10px auto 10px;
+        background-color: rgba(0, 0, 0, 0);
+        border-style: none;
+        color: black;
+        font-weight: $font-weight-bolder;
+    }
+
+    #search-button {
+        background-color: $primary;
+        border-radius: 7px;
+        height: 75%;
+        color: white;
+    }
+
+}
+
+.input-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+    .form-control { border-style: none; }
+    input {
+        background-color: rgba(0, 0, 0, 0);
+        width: 95%;
+    }
+
+}
+
+//=-=-=-
+
+
+// FOLLOWING
+
+.user-on-list {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    min-height: 60px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: lighter;
+    width: 92%;
+    margin: 10px auto 10px auto;
+    &:hover{
+        cursor:pointer;
+    }
+    #user-url {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        overflow-wrap: break-word !important;
+        overflow-x: hidden;
+        margin-left: 10px;
+        font-size: 15px;
+        width: 70%;
+        text-overflow: clip;
+    }
+    button {
+        background-color: $primary;
+        color: white;
+        font-size: 15px;
+        font-weight: lighter;
+        border-style: none;
+        border-radius: 6px;
+        margin-right: 10px;
+        height: 40px;
+    }
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= SHOULD BE ON A SCSS FOR THE NotificationCenter BUT HERE FOR NOW -=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-
+
+.notification-option {
+    width: 100%;
+    background-color: white;
+    border-style: none;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.interaction {
+    display: flex;
+    flex-direction: row;
+    min-height: 60px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    margin: 10px auto 10px auto;
+    font-weight: lighter;
+    justify-content: space-between;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.notification-icon {
+    stroke: #0085FF;
+    stroke-width:0.35mm;
+    fill: #72BBFF;
+}
+
+.mention  {
+    border-radius: 5px;
+    background-color: white;
+    font-weight: lighter;
+    .reference-note {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding-bottom: 30px;
+        font-size: 15px;
+        color: gray;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 /*=-=-=-=-=-=-=-=-=-=-=-=- SHOULD BE NEW SCSS FILE ONLY FOR POPUP-MODAL STUFF, BUT TEMPORARILY HERE*/
 
@@ -35,7 +189,7 @@ body {
     background-color: white;
     background-clip: padding-box;
     border-style: none;
-    border-radius: 30px;
+    border-radius: 10px;
     outline: 0;
     font-family: 'Kumbh Sans', sans-serif;
 
@@ -151,7 +305,6 @@ div.vagabond-navbar {
     color: white;
     background-color: $dark;
     height: 70px;
-    flex-wrap: wrap;
     justify-content: space-between;
 
     a {
@@ -300,6 +453,21 @@ div.vagabond-navbar {
         .icon-bar-horizontal {
             width: 100%;
             justify-content: space-around;
+            margin: 0;
+        }
+
+        .icon-bar-horizontal-searching {
+            display: none;
+        }
+
+        .bar-parent-searching {
+            height: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
         }
 
         svg.icon {
