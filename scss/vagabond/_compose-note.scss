@@ -4,7 +4,35 @@
 @import "../mixins";
 @import "../utilities";
 
-#compose-note {
+#compose-note-modal {
+  display: flex;
+    flex-wrap: overflow;
+    flex-direction: row;
+    margin: 0px;
+    justify-content: space-between;
+    width: 100%;
+
+    .compose-note {
+      display: flex;
+      background-color: white;
+      border-style: none;
+      border-width: 0;
+      border-radius: 12px;
+
+      .textarea-container {
+        flex: 1;
+      }
+    }
+
+    .buttons {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }  
+}
+
+#compose-note  {
     display: flex;
     flex-wrap: overflow;
     flex-direction: row;
