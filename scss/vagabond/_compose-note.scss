@@ -21,6 +21,7 @@
 
       .textarea-container {
         flex: 1;
+        font-size: 15px;
       }
     }
 
@@ -70,7 +71,7 @@
       align-items: center;
       font-family: 'Kumbh Sans', sans-serif;
       font-weight: $font-weight-bolder;
-      font-size: 18px;
+      font-size: 15px;
       color: white;
       border-style: none;
       height: 46%;
@@ -78,12 +79,13 @@
 
     .draft {
       border-radius: 12px;
+      border-color: white;
       display: flex;
       flex-direction: row;
       background-color: white;
       font-family: 'Kumbh Sans', sans-serif;
       font-weight: $font-weight-bolder;
-      font-size: 18px;
+      font-size: 15px;
       color: $secondary;
       padding-left: 5px;
       align-items: center;
