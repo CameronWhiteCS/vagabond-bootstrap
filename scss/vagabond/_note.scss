@@ -19,10 +19,9 @@
         width: 64px;
     }
 
-    .content {
+    .content-container {
         margin: 0px 15px 0px 15px;
         word-wrap: anywhere;
-        color: $secondary;
         width: 100%;
 
         .user-and-time {
@@ -43,12 +42,21 @@
             }
         }
 
-        .info {
+        .note-content {
             margin: 10px 0px 10px 0px !important;
             
             p {
                 font-size: 15px !important;
                 font-weight: 300 !important;
+                color: black;
+                margin: 5px;
+                padding: 0px;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                color: black;
+                margin: 5px;
+                padding: 0px;
             }
         }
     }
